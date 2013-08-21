@@ -6,6 +6,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,6 +22,7 @@ public final class TwinPushConnectionServiceImpl implements TwinPushConnectionSe
 	public TwinPushConnectionServiceImpl()
 	{
 		this.restTemplate = new RestTemplate();
+		restTemplate.getMessageConverters().add(new MappingJacksonHttpMessageConverter());
 	}
 	
 	public ResponseEntity<? extends AbstractTwinpushResponseDTO> sendRequestToTwinpush(

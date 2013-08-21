@@ -2,20 +2,20 @@ package com.proyecti.twincoders.twinpush.dto.response.createDevice;
 
 public final class CreateDeviceObjectsResponseDTO {
 
-	private int id;
+	private String id;
 	private String token;
 	private String alias_device;
 	private String created_at;
 	private String updated_at;
 	private String last_registered_at;
-	private int app_id;
+	private String app_id;
 	private String type;
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -59,11 +59,11 @@ public final class CreateDeviceObjectsResponseDTO {
 		this.last_registered_at = last_registered_at;
 	}
 
-	public int getApp_id() {
+	public String getApp_id() {
 		return app_id;
 	}
 
-	public void setApp_id(int app_id) {
+	public void setApp_id(String app_id) {
 		this.app_id = app_id;
 	}
 

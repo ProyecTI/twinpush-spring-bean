@@ -1,22 +1,21 @@
 package com.proyecti.twincoders.twinpush.dto.response.pushNotifications;
 
 public final class PushNotificationsObjectsResponseDTO {
-
-	private int id;
+	private String id;
 	private String sound;
 	private String alert;
+	private String title;
 	private String badge;
-	private String created_at;
-	private String updated_at;
+	private String tp_rich_url;
 	private String send_since;
+	private CustomPropertiesResponseDTO custom_properties;
 	private String type;
-	private int device_id;
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -36,6 +35,14 @@ public final class PushNotificationsObjectsResponseDTO {
 		this.alert = alert;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public String getBadge() {
 		return badge;
 	}
@@ -44,20 +51,12 @@ public final class PushNotificationsObjectsResponseDTO {
 		this.badge = badge;
 	}
 
-	public String getCreated_at() {
-		return created_at;
+	public String getTp_rich_url() {
+		return tp_rich_url;
 	}
 
-	public void setCreated_at(String created_at) {
-		this.created_at = created_at;
-	}
-
-	public String getUpdated_at() {
-		return updated_at;
-	}
-
-	public void setUpdated_at(String updated_at) {
-		this.updated_at = updated_at;
+	public void setTp_rich_url(String tp_rich_url) {
+		this.tp_rich_url = tp_rich_url;
 	}
 
 	public String getSend_since() {
@@ -68,20 +67,21 @@ public final class PushNotificationsObjectsResponseDTO {
 		this.send_since = send_since;
 	}
 
+	public CustomPropertiesResponseDTO getCustom_properties() {
+		return custom_properties;
+	}
+
+	public void setCustom_properties(
+			CustomPropertiesResponseDTO custom_properties) {
+		this.custom_properties = custom_properties;
+	}
+
 	public String getType() {
 		return type;
 	}
 
 	public void setType(String type) {
 		this.type = type;
-	}
-
-	public int getDevice_id() {
-		return device_id;
-	}
-
-	public void setDevice_id(int device_id) {
-		this.device_id = device_id;
 	}
 
 }

@@ -27,7 +27,7 @@ public final class PushNotificationInfoRequestDTO {
 	 * yyyy-mm-dd hh:mm:ss Z. If this parameter is not present, the notification
 	 * will be send right now.
 	 */
-	private String send_since;
+	//private String send_since;
 
 	private CustomPropertiesRequestDTO custom_properties;
 
@@ -53,14 +53,6 @@ public final class PushNotificationInfoRequestDTO {
 
 	public void setBadge(String badge) {
 		this.badge = badge;
-	}
-
-	public String getSend_since() {
-		return send_since;
-	}
-
-	public void setSend_since(String send_since) {
-		this.send_since = send_since;
 	}
 
 	public CustomPropertiesRequestDTO getCustom_properties() {
