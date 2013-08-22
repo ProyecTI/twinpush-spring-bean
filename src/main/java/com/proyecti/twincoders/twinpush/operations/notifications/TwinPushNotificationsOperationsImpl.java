@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import com.proyecti.twincoders.twinpush.constants.PushConstants;
 import com.proyecti.twincoders.twinpush.dto.request.pushNotification.PushNotificationRequestDTO;
 import com.proyecti.twincoders.twinpush.dto.request.pushNotifications.PushNotificationsAliasesRequestDTO;
+import com.proyecti.twincoders.twinpush.dto.request.pushNotifications.PushNotificationsIdsRequestDTO;
 import com.proyecti.twincoders.twinpush.dto.response.pushNotification.PushNotificationResponseDTO;
 import com.proyecti.twincoders.twinpush.dto.response.pushNotifications.PushNotificationsResponseDTO;
 import com.proyecti.twincoders.twinpush.dto.response.showNotification.ShowNotificationByAppResponseDTO;
@@ -85,4 +86,18 @@ public class TwinPushNotificationsOperationsImpl extends AbstractTwinPushOperati
 	}
 
 	
+	
+	@SuppressWarnings("unchecked")
+	public ResponseEntity<PushNotificationsResponseDTO> pushNotificationsByIds(final Map<String,String> uriVariablesMap, final PushNotificationsIdsRequestDTO pushNotificationsRequestDTO) {
+
+		final HttpEntity<PushNotificationsIdsRequestDTO> httpEntity = new HttpEntity<PushNotificationsIdsRequestDTO>(pushNotificationsRequestDTO, buildHeaders());
+
+		return (ResponseEntity<PushNotificationsResponseDTO>) 
+				twinPushConnectionService.sendRequestToTwinpush(HttpMethod.POST,
+											PushConstants.TWINPUSH_URL_APP_PUSH_NOTIFICATION, 
+											uriVariablesMap,
+											httpEntity,
+											PushNotificationsResponseDTO.class);
+	}
+
 }

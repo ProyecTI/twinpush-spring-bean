@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 
 import com.proyecti.twincoders.twinpush.dto.request.pushNotification.PushNotificationRequestDTO;
 import com.proyecti.twincoders.twinpush.dto.request.pushNotifications.PushNotificationsAliasesRequestDTO;
+import com.proyecti.twincoders.twinpush.dto.request.pushNotifications.PushNotificationsIdsRequestDTO;
 import com.proyecti.twincoders.twinpush.dto.response.pushNotification.PushNotificationResponseDTO;
 import com.proyecti.twincoders.twinpush.dto.response.pushNotifications.PushNotificationsResponseDTO;
 import com.proyecti.twincoders.twinpush.dto.response.showNotification.ShowNotificationByAppResponseDTO;
@@ -38,10 +39,16 @@ public interface TwinPushNotificationsOperations {
 	 * Creates a new notification just like the method for 1 device but several devices can be passed. 
 	 * All the devices must belong to the app specified in the uri with :app_id.
 	 * 
-	 * It works in 3 modes: device ids, segments or aliases
 	 * 		
 	 */
 	ResponseEntity<PushNotificationsResponseDTO> pushNotificationsByAliases(Map<String, String> uriVariablesMap, PushNotificationsAliasesRequestDTO pushNotificationsRequestDTO);
+	
+	/**
+	 * Creates a new notification just like the method for 1 device but several devices can be passed. 
+	 * All the devices must belong to the app specified in the uri with :app_id.
+	 * 		
+	 */
+	ResponseEntity<PushNotificationsResponseDTO> pushNotificationsByIds(Map<String, String> uriVariablesMap, PushNotificationsIdsRequestDTO pushNotificationsRequestDTO);
 	
 	
 }
