@@ -75,4 +75,13 @@ public final class CreateDeviceObjectsResponseDTO {
 		this.type = type;
 	}
 
+	@Override
+	public String toString() {
+		return "[id=" + id + ", token=" + token
+				+ ", alias_device=" + alias_device + ", created_at="
+				+ created_at + ", updated_at=" + updated_at
+				+ ", last_registered_at=" + last_registered_at + ", app_id="
+				+ app_id + ", type=" + type + "]";
+	}
+
 }

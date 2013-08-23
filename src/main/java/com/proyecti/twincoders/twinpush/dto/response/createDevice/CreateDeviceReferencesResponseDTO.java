@@ -75,4 +75,12 @@ public final class CreateDeviceReferencesResponseDTO {
 		this.type = type;
 	}
 
+	@Override
+	public String toString() {
+		return "[id=" + id + ", name=" + name
+				+ ", mode=" + mode + ", icon_file_name=" + icon_file_name
+				+ ", created_at=" + created_at + ", updated_at=" + updated_at
+				+ ", user_id=" + user_id + ", type=" + type + "]";
+	}
+
 }

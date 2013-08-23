@@ -1,5 +1,7 @@
 package com.proyecti.twincoders.twinpush.dto.response.createDevice;
 
+import java.util.Arrays;
+
 import com.proyecti.twincoders.twinpush.dto.response.AbstractTwinpushResponseDTO;
 
 public final class CreateDeviceResponseDTO extends AbstractTwinpushResponseDTO {
@@ -21,6 +23,12 @@ public final class CreateDeviceResponseDTO extends AbstractTwinpushResponseDTO {
 
 	public void setReferences(CreateDeviceReferencesResponseDTO[] references) {
 		this.references = references;
+	}
+
+	@Override
+	public String toString() {
+		return "[objects=" + Arrays.toString(objects)
+				+ ", references=" + Arrays.toString(references) + "]";
 	}
 
 }

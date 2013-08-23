@@ -12,4 +12,9 @@ public final class CustomPropertiesResponseDTO
 		this.tp_rich_url = tp_rich_url;
 	}
 
+	@Override
+	public String toString() {
+		return "[tp_rich_url=" + tp_rich_url + "]";
+	}
+	
 }

@@ -1,6 +1,7 @@
 package com.proyecti.twincoders.twinpush.dto.response.pushNotifications;
 
-public final class PushNotificationsObjectsResponseDTO {
+public final class PushNotificationsObjectsResponseDTO 
+{
 	private String id;
 	private String sound;
 	private String alert;
@@ -71,8 +72,7 @@ public final class PushNotificationsObjectsResponseDTO {
 		return custom_properties;
 	}
 
-	public void setCustom_properties(
-			CustomPropertiesResponseDTO custom_properties) {
+	public void setCustom_properties(CustomPropertiesResponseDTO custom_properties) {
 		this.custom_properties = custom_properties;
 	}
 
@@ -84,4 +84,12 @@ public final class PushNotificationsObjectsResponseDTO {
 		this.type = type;
 	}
 
+	@Override
+	public String toString() {
+		return "[id=" + id + ", sound="
+				+ sound + ", alert=" + alert + ", title=" + title + ", badge="
+				+ badge + ", tp_rich_url=" + tp_rich_url + ", send_since="
+				+ send_since + ", custom_properties=" + custom_properties
+				+ ", type=" + type + "]";
+	}
 }

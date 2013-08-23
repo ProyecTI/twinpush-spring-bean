@@ -1,5 +1,7 @@
 package com.proyecti.twincoders.twinpush.dto.request.pushNotifications;
 
+import java.util.Arrays;
+
 import com.proyecti.twincoders.twinpush.dto.request.AbstractTwinpushRequestDTO;
 
 public final class PushNotificationsIdsRequestDTO extends AbstractTwinpushRequestDTO 
@@ -48,6 +50,13 @@ public final class PushNotificationsIdsRequestDTO extends AbstractTwinpushReques
 
 	public void setDevices_ids(String[] devices_ids) {
 		this.devices_ids = devices_ids;
+	}
+
+	@Override
+	public String toString() {
+		return "[sound=" + sound + ", alert="
+				+ alert + ", badge=" + badge + ", send_since=" + send_since
+				+ ", devices_ids=" + Arrays.toString(devices_ids) + "]";
 	}
 
 }
